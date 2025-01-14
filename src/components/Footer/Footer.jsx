@@ -1,3 +1,9 @@
+import { Newsletter } from "../Newsletter/Newsletter";
+
 export const Footer = () => {
-  return <div>Footer</div>;
+  return (
+    <footer>
+      <Newsletter />
+    </footer>
+  );
 };
