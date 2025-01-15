@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "TrebuchetMS";
+  src: url("../../assets/fonts/TrebuchetMS.ttf");
+}
+
+@font-face {
+  font-family: "BrushScriptMT";
+  src: url("./../assets/fonts/BrushScriptMT.otf");
+}
+
+%TrebuchetMS {
+  font-family: "TrebuchetMS", sans-serif;
+}
+
+%BrushScriptMT {
+  font-family: "BrushScriptMT", sans-serif;
+}

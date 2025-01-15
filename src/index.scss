@@ -1,0 +1,15 @@
+@use "./style/variables";
+@use "./style/placeholders";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  @extend %TrebuchetMS;
+  font-size: 16px;
+}

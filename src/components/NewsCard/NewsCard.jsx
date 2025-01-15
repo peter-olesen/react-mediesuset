@@ -7,9 +7,9 @@ export const NewsCard = ({ title, content, image, id }) => {
       <img src={image} alt={title} />
       <h3>{title}</h3>
       <p>{content}</p>
-      <p className={nc.ReadMore}>
-        <NavLink to={`/nyhed/${id}`}>Læs mere</NavLink>
-      </p>
+      <NavLink to={`/nyhed/${id}`}>
+        <div className={nc.ReadMore}>Læs mere</div>
+      </NavLink>
     </div>
   );
 };

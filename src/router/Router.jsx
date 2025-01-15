@@ -17,12 +17,12 @@ export const Router = () => {
 
   useEffect(() => {
     const pageTitles = {
-      "/": "Home",
-      "/events": "Events",
-      "/camps": "Camps",
-      "/tickets": "Tickets",
-      "/practical-info": "PracticalInfo",
-      "/login": "Login",
+      "/": "Mediesuset",
+      "/events": "Events - Mediesuset",
+      "/camps": "Camps - Mediesuset",
+      "/tickets": "Tickets - Mediesuset",
+      "/practical-info": "Praktisk Info - Mediesuset",
+      "/login": "Login - Mediesuset",
     };
 
     const currentTitle = pageTitles[location.pathname];

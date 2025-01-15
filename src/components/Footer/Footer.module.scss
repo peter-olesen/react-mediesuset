@@ -1,0 +1,16 @@
+@use "../../style/variables" as *;
+@use "../../style/placeholders";
+
+.Footer {
+  background: $Black;
+  height: 714px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+
+  img {
+    width: 309px;
+    height: 323px;
+  }
+}

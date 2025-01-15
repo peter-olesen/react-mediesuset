@@ -1,0 +1,56 @@
+@use "../../style/variables" as *;
+@use "../../style/placeholders";
+
+.Newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  color: $White;
+
+  h3 {
+    font-size: 40px;
+    margin: 1rem 1rem 0;
+  }
+
+  p {
+    font-weight: bold;
+  }
+
+  form {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid $LighterGray;
+    margin: 2rem 0;
+
+    .Icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+      height: 60px;
+      background: $LighterGray;
+    }
+
+    input[type="email"] {
+      width: 644px;
+      height: 60px;
+      background: $White;
+      color: $Black;
+      border: none;
+      padding: 0 1rem;
+
+      &::placeholder {
+        font-weight: bold;
+      }
+    }
+
+    button {
+      width: 147px;
+      background: $Blue;
+      border: none;
+      font-weight: bold;
+      color: $White;
+    }
+  }
+}
