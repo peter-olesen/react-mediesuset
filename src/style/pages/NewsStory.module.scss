@@ -1,0 +1,13 @@
+.NewsStory {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1600px;
+
+  p {
+    margin: 0.5rem 0;
+  }
+  img {
+    max-width: 1600px;
+  }
+}

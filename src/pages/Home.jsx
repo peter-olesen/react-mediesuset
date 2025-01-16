@@ -17,6 +17,7 @@ export const Home = () => {
     <>
       <Hero imageSource={Hero1} altText="Hero Image" />
       <SectionContainer>
+        <h2>NYHEDER</h2>
         <div className={hs.CardContainer}>
           {data?.items?.map((item) => {
             return (

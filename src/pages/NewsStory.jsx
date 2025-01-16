@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useGet } from "../hooks/useGet";
 import { useEffect } from "react";
+import { SectionContainer } from "../components/SectionContainer/SectionContainer";
+import nss from "../style/pages/NewsStory.module.scss";
 
 export const NewsStory = () => {
   const { id } = useParams();
@@ -16,11 +18,11 @@ export const NewsStory = () => {
 
   //   console.log(data);
   return (
-    <div>
+    <div className={nss.NewsStory}>
       <img src={story?.image} alt={story?.title} />
-      <p>{story?.author}</p>
-      <p>{story?.datetime}</p>
       <h2>{story?.title}</h2>
+      <p>{story?.datetime}</p>
+      <p>{story?.author}</p>
       <p>{story?.teaser}</p>
       <p>{story?.content}</p>
     </div>
