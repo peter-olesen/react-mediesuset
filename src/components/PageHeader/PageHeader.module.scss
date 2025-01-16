@@ -1,0 +1,9 @@
+@use "../../style/variables" as *;
+@use "../../style/placeholders";
+
+.Header {
+  background: $DarkGray;
+  color: $White;
+  width: 1200px;
+  padding: 0.5rem 2rem;
+}

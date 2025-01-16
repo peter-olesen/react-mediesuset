@@ -2,17 +2,6 @@
 @use "../placeholders";
 
 .PartoutTickets {
-  .Header {
-    background: $DarkGray;
-    color: $White;
-    width: 1200px;
-    padding: 1rem 2rem;
-  }
-
-  .Header:nth-of-type(4) {
-    margin-top: 3rem;
-  }
-
   .TicketRow {
     display: grid;
     grid-template-columns: 3fr 0.5fr 0.5fr;
@@ -32,13 +21,6 @@
 
 .SingleDayTickets {
   margin-top: 4rem;
-
-  .Header {
-    background: $DarkGray;
-    color: $White;
-    width: 1200px;
-    padding: 1rem 2rem;
-  }
 
   .TicketRow {
     display: grid;
@@ -66,4 +48,9 @@
   color: $White;
   width: 150px;
   height: 42px;
+
+  a {
+    color: $White;
+    text-decoration: none;
+  }
 }

@@ -1,9 +1,11 @@
+import { NavLink } from "react-router-dom";
+import ts from "../style/pages/Tickets.module.scss";
 import { SectionContainer } from "../components/SectionContainer/SectionContainer";
 import { useGet } from "../hooks/useGet";
-import ts from "../style/pages/Tickets.module.scss";
 import { Hero } from "../components/Hero/Hero";
 
 import Hero3 from "../assets/img/Hero3.png";
+import { PageHeader } from "../components/PageHeader/PageHeader";
 
 export const Tickets = () => {
   const { data, isLoading, error } = useGet(
@@ -16,36 +18,37 @@ export const Tickets = () => {
       <SectionContainer>
         <h2>BILLETTER</h2>
         <div className={ts.PartoutTickets}>
-          <div className={ts.Header}>
-            <h3>PARTOUT BILLET - ALLE DAGE</h3>
-          </div>
+          <PageHeader pageTitle="PARTOUT BILLET - ALLE DAGE" />
           {data?.items
             ?.filter((item) => item.type === "partout")
-            .map((item) => {
+            .map((ticket) => {
               return (
-                <div key={item.id} className={ts.TicketRow}>
-                  <p>{item.name}</p>
-                  <p>{item.price} DKK</p>
-                  <p className={ts.BuyTicket}>KØB BILLET</p>
+                <div key={ticket.id} className={ts.TicketRow}>
+                  <p>{ticket.name}</p>
+                  <p>{ticket.price} DKK</p>
+
+                  <p className={ts.BuyTicket}>
+                    <NavLink to={`/ticket/${ticket.id}`}>KØB BILLET</NavLink>
+                  </p>
                 </div>
               );
             })}
-          <div className={ts.SingleDayTickets}>
-            <div className={ts.Header}>
-              <h3>ENKELTBILLETTER</h3>
-            </div>
-            {data?.items
-              ?.filter((item) => item.type === "single")
-              .map((item) => {
-                return (
-                  <div key={item.id} className={ts.TicketRow}>
-                    <p>{item.name}</p>
-                    <p>{item.price} DKK</p>
-                    <p className={ts.BuyTicket}>KØB BILLET</p>
-                  </div>
-                );
-              })}
-          </div>
+        </div>
+        <div className={ts.SingleDayTickets}>
+          <PageHeader pageTitle="ENKELTBILLETTER" />
+          {data?.items
+            ?.filter((item) => item.type === "single")
+            .map((ticket) => {
+              return (
+                <div key={ticket.id} className={ts.TicketRow}>
+                  <p>{ticket.name}</p>
+                  <p>{ticket.price} DKK</p>
+                  <p className={ts.BuyTicket}>
+                    <NavLink to={`/ticket/${ticket.id}`}>KØB BILLET</NavLink>
+                  </p>
+                </div>
+              );
+            })}
         </div>
       </SectionContainer>
     </>

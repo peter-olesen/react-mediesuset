@@ -13,6 +13,7 @@ import { PracticalInfo } from "../pages/PracticalInfo";
 import { Login } from "../pages/Login";
 import { NewsStory } from "../pages/NewsStory";
 import { PageNotFound } from "../pages/PageNotFound";
+import { BuyTicket } from "../pages/BuyTicket";
 
 export const Router = () => {
   const location = useLocation();
@@ -46,6 +47,7 @@ export const Router = () => {
         <Route path={"/program"} element={<Program />} />
         <Route path={"/camps"} element={<Camps />} />
         <Route path={"/tickets"} element={<Tickets />} />
+        <Route path={"/ticket/:id"} element={<BuyTicket />} />
         <Route path={"/practical-info"} element={<PracticalInfo />} />
         <Route path={"/login"} element={<Login />} />
 
