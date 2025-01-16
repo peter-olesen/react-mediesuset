@@ -22,7 +22,7 @@ export const Router = () => {
       "/": "Mediesuset",
       "/events": "Events - Mediesuset",
       "/camps": "Camps - Mediesuset",
-      "/tickets": "Tickets - Mediesuset",
+      "/tickets": "Billetter - Mediesuset",
       "/practical-info": "Praktisk Info - Mediesuset",
       "/login": "Login - Mediesuset",
     };

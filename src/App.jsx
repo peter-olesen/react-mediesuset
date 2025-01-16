@@ -6,7 +6,7 @@ function App() {
   return (
     <UserContextProvider>
       <ScrollToTop />
-      <Router />;
+      <Router />
     </UserContextProvider>
   );
 }
