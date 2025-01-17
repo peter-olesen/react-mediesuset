@@ -1,4 +1,5 @@
 import ns from "./Newsletter.module.scss";
+import { HiOutlineMail } from "react-icons/hi";
 
 export const Newsletter = () => {
   return (
@@ -6,7 +7,9 @@ export const Newsletter = () => {
       <h3>TILMELD NYHEDSBREV</h3>
       <p>Få de seneste nyheder sendt til din indbakke</p>
       <form>
-        <span className={ns.Icon}>Icon</span>
+        <span className={ns.Icon}>
+          <HiOutlineMail />
+        </span>
         <input
           type="email"
           name="newsletter"

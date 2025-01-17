@@ -8,9 +8,7 @@ export const Navigation = () => {
         <li>
           <NavLink to="/">Forside</NavLink>
         </li>
-        <li>
-          <NavLink to="/events">Events</NavLink>
-        </li>
+        <li>Events</li>
         <ul>
           <li>
             <NavLink to="/line-up">Line-up</NavLink>

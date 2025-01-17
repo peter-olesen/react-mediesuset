@@ -4,7 +4,6 @@ import { Layout } from "../layouts/Layout";
 
 // Pages
 import { Home } from "../pages/Home";
-import { Events } from "../pages/Events";
 import { Lineup } from "../pages/Lineup";
 import { Program } from "../pages/Program";
 import { Camps } from "../pages/Camps";
@@ -21,7 +20,7 @@ export const Router = () => {
   useEffect(() => {
     const pageTitles = {
       "/": "Mediesuset",
-      "/events": "Events - Mediesuset",
+      "/line-up": "Line-up - Mediesuset",
       "/camps": "Camps - Mediesuset",
       "/tickets": "Billetter - Mediesuset",
       "/practical-info": "Praktisk Info - Mediesuset",
@@ -42,7 +41,6 @@ export const Router = () => {
       <Route path={"/"} element={<Layout />}>
         <Route index element={<Home />} />
         <Route path={"/nyhed/:id"} element={<NewsStory />} />
-        <Route path={"/events"} element={<Events />} />
         <Route path={"/line-up"} element={<Lineup />} />
         <Route path={"/program"} element={<Program />} />
         <Route path={"/camps"} element={<Camps />} />

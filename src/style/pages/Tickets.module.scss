@@ -8,6 +8,7 @@
     align-items: center;
     gap: 2rem;
     padding: 0 2rem;
+    border-bottom: 1px solid $Black;
   }
 
   .TicketRow:nth-of-type(even) {
@@ -15,7 +16,7 @@
   }
 
   .TicketRow:nth-of-type(odd) {
-    background: $LightGray;
+    background: $Gray;
   }
 }
 
@@ -35,7 +36,7 @@
   }
 
   .TicketRow:nth-of-type(odd) {
-    background: $LightGray;
+    background: $Gray;
   }
 }
 
@@ -48,6 +49,7 @@
   color: $White;
   width: 150px;
   height: 42px;
+  border: 1px solid $LightGray;
 
   a {
     color: $White;

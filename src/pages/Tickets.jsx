@@ -5,7 +5,7 @@ import { useGet } from "../hooks/useGet";
 import { Hero } from "../components/Hero/Hero";
 
 import Hero3 from "../assets/img/Hero3.png";
-import { PageHeader } from "../components/PageHeader/PageHeader";
+import { HeaderTitle } from "../components/HeaderTitle/HeaderTitle";
 
 export const Tickets = () => {
   const { data, isLoading, error } = useGet(
@@ -18,7 +18,7 @@ export const Tickets = () => {
       <SectionContainer>
         <h2>BILLETTER</h2>
         <div className={ts.PartoutTickets}>
-          <PageHeader pageTitle="PARTOUT BILLET - ALLE DAGE" />
+          <HeaderTitle title="PARTOUT BILLET - ALLE DAGE" />
           {data?.items
             ?.filter((item) => item.type === "partout")
             .map((ticket) => {
@@ -35,7 +35,7 @@ export const Tickets = () => {
             })}
         </div>
         <div className={ts.SingleDayTickets}>
-          <PageHeader pageTitle="ENKELTBILLETTER" />
+          <HeaderTitle title="ENKELTBILLETTER" />
           {data?.items
             ?.filter((item) => item.type === "single")
             .map((ticket) => {

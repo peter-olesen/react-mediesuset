@@ -1,0 +1,12 @@
+@use "../../style/variables" as *;
+@use "../../style/placeholders";
+
+.Header {
+  background: $DarkGray;
+  color: $White;
+  width: 1200px;
+  height: 75px;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+}

@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useGet } from "../hooks/useGet";
 import { useEffect } from "react";
 import { SectionContainer } from "../components/SectionContainer/SectionContainer";
-import { PageHeader } from "../components/PageHeader/PageHeader";
+import { HeaderTitle } from "../components/HeaderTitle/HeaderTitle";
 import bts from "../style/pages/BuyTicket.module.scss";
 
 export const BuyTicket = () => {
@@ -21,10 +21,10 @@ export const BuyTicket = () => {
   return (
     <SectionContainer>
       <h2>BILLETTER</h2>
-      <PageHeader pageTitle="INFORMATION OM DEN VALGTE BILLET" />
+      <HeaderTitle title="INFORMATION OM DEN VALGTE BILLET" />
       {ticket?.description}
       <p>{ticket?.price} DKK</p>
-      <PageHeader pageTitle="BESTILLING" />
+      <HeaderTitle title="BESTILLING" />
     </SectionContainer>
   );
 };

@@ -20,7 +20,7 @@
   form {
     display: flex;
     flex-direction: row;
-    border: 1px solid $LighterGray;
+    border: 1px solid $LightGray;
     margin: 2rem 0;
 
     .Icon {
@@ -30,6 +30,12 @@
       width: 60px;
       height: 60px;
       background: $LighterGray;
+
+      svg {
+        color: $Black;
+        width: 30px;
+        height: 24px;
+      }
     }
 
     input[type="email"] {

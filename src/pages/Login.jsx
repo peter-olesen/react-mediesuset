@@ -1,4 +1,7 @@
 import { useContext, useState } from "react";
+import { MdAlternateEmail } from "react-icons/md";
+import { CiLock } from "react-icons/ci";
+
 import { UserContext } from "../context/UserContext/UserContext";
 import { SectionContainer } from "../components/SectionContainer/SectionContainer";
 import ls from "../style/pages/Login.module.scss";
@@ -41,28 +44,39 @@ export const Login = () => {
 
   return (
     <SectionContainer>
-      <h2>Login</h2>
+      <h2>LOGIN</h2>
+      <p>Indtast login oplysninger:</p>
       {loginMessage && <p>{loginMessage}</p>}
       {error && <p className={ls.error}>{error}</p>}
       <form className={ls.Login} onSubmit={submitData}>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="Indtast din email"
-          autoComplete="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          name="password"
-          id="password"
-          placeholder="Indtast adgangskode"
-          autoComplete="current-password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+        <div>
+          <span className={ls.Icon}>
+            <MdAlternateEmail />
+          </span>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Indtast din email"
+            autoComplete="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+        <div>
+          <span className={ls.Icon}>
+            <CiLock />
+          </span>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Indtast adgangskode"
+            autoComplete="current-password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
         <button type="submit">LOGIN</button>
       </form>
     </SectionContainer>
