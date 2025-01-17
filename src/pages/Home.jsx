@@ -5,7 +5,7 @@ import { useGet } from "../hooks/useGet";
 import { Hero } from "../components/Hero/Hero";
 import { SectionContainer } from "../components/SectionContainer/SectionContainer";
 
-import Hero1 from "../assets/img/Hero1.png";
+import HeroImg from "../assets/img/Hero1.png";
 
 export const Home = () => {
   const { data, isLoading, error } = useGet(
@@ -15,7 +15,7 @@ export const Home = () => {
   // console.log(data);
   return (
     <>
-      <Hero imageSource={Hero1} altText="Hero Image" />
+      <Hero imageSource={HeroImg} altText="Hero Image" />
       <SectionContainer>
         <h2>NYHEDER</h2>
         <div className={hs.CardContainer}>

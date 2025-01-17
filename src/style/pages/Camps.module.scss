@@ -1,0 +1,17 @@
+.Camp {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem 0;
+
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  img {
+    width: 100%;
+    border-radius: 2rem;
+  }
+}

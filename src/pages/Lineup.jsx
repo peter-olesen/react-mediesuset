@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { useGet } from "../hooks/useGet";
+import { Hero } from "../components/Hero/Hero";
 import { SectionContainer } from "../components/SectionContainer/SectionContainer";
 import { StageSwitcher } from "../components/StageSwitcher/StageSwitcher";
 import { EventCard } from "../components/EventCard/EventCard";
 import { StageGrid } from "../components/StageGrid/StageGrid";
+
+import HeroImg from "../assets/img/Hero1.png";
 
 export const Lineup = () => {
   const [filter, setFilter] = useState(0);
@@ -15,6 +18,7 @@ export const Lineup = () => {
   const filteredData = data?.items?.filter(
     (item) => filter === 0 || filter === item.stage_id
   );
+
   const sortedData =
     filter === 0
       ? filteredData?.sort((a, b) => a.title.localeCompare(b.title))
@@ -28,25 +32,29 @@ export const Lineup = () => {
   ];
 
   return (
-    <SectionContainer>
-      <StageSwitcher setFilter={setFilter} />
-      <StageGrid>
-        {sortedData.map((item) => {
-          if (filter == item.stage_id || filter == 0) {
-            return (
-              <EventCard
-                style={{
-                  backgroundColor: `${stageColor[item.stage_id - 1].color}`,
-                }}
-                key={item.id}
-                image={item.image}
-                name={item.title}
-                date={item.datetime}
-              />
-            );
-          }
-        })}
-      </StageGrid>
-    </SectionContainer>
+    <>
+      <Hero imageSource={HeroImg} altText="Hero Image" />
+      <SectionContainer>
+        <h2>LINE UP</h2>
+        <StageSwitcher setFilter={setFilter} />
+        <StageGrid>
+          {sortedData?.map((item) => {
+            if (filter == item.stage_id || filter == 0) {
+              return (
+                <EventCard
+                  style={{
+                    backgroundColor: `${stageColor[item.stage_id - 1].color}`,
+                  }}
+                  key={item.id}
+                  image={item.image}
+                  name={item.title}
+                  date={item.datetime}
+                />
+              );
+            }
+          })}
+        </StageGrid>
+      </SectionContainer>
+    </>
   );
 };
