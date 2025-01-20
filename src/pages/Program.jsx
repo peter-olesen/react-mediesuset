@@ -15,7 +15,7 @@ export const Program = () => {
     "https://api.mediehuset.net/mediesuset/events"
   );
 
-  console.log(data);
+  // console.log(data);
 
   return (
     <>
@@ -27,6 +27,8 @@ export const Program = () => {
         <StageRow time="1234" artist="mimeimde" />
         <StageRow time="1234" artist="mimeimde" />
         <StageRow time="1234" artist="mimeimde" />
+        <br />
+        <StageHeader stageName="RØD SCENE" />
         <StageRow time="1234" artist="mimeimde" />
         <StageRow time="1234" artist="mimeimde" />
         <StageRow time="1234" artist="mimeimde" />
