@@ -8,15 +8,17 @@ export const Navigation = () => {
         <li>
           <NavLink to="/">Forside</NavLink>
         </li>
-        <li>Events</li>
-        <ul>
-          <li>
-            <NavLink to="/line-up">Line-up</NavLink>
-          </li>
-          <li>
-            <NavLink to="/program">Program</NavLink>
-          </li>
-        </ul>
+        <li>
+          Events
+          <ul>
+            <li>
+              <NavLink to="/line-up">Line-up</NavLink>
+            </li>
+            <li>
+              <NavLink to="/program">Program</NavLink>
+            </li>
+          </ul>
+        </li>
         <li>
           <NavLink to="/camps">Camps</NavLink>
         </li>

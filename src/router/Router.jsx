@@ -21,6 +21,7 @@ export const Router = () => {
     const pageTitles = {
       "/": "Mediesuset",
       "/line-up": "Line-up - Mediesuset",
+      "/program": "Program - Mediesuset",
       "/camps": "Camps - Mediesuset",
       "/tickets": "Billetter - Mediesuset",
       "/practical-info": "Praktisk Info - Mediesuset",

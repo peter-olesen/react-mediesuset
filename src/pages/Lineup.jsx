@@ -5,11 +5,25 @@ import { SectionContainer } from "../components/SectionContainer/SectionContaine
 import { StageSwitcher } from "../components/StageSwitcher/StageSwitcher";
 import { EventCard } from "../components/EventCard/EventCard";
 import { StageGrid } from "../components/StageGrid/StageGrid";
+import { ArtistModal } from "../components/ArtistModal/ArtistModal";
+import { formatDateTime } from "../helpers/FormatDateTime.jsx";
 
 import HeroImg from "../assets/img/Hero1.png";
 
 export const Lineup = () => {
   const [filter, setFilter] = useState(0);
+  const [open, setOpen] = useState(false);
+  const [selectedArtist, setSelectedArtist] = useState(null);
+
+  const closeModal = () => {
+    setOpen(false);
+    setSelectedArtist(null);
+  };
+
+  const openModal = (artist) => {
+    setOpen(true);
+    setSelectedArtist(artist);
+  };
 
   const { data, isLoading, error } = useGet(
     "https://api.mediehuset.net/mediesuset/events"
@@ -33,6 +47,15 @@ export const Lineup = () => {
 
   return (
     <>
+      <ArtistModal
+        isOpen={open}
+        onClose={closeModal}
+        stage={selectedArtist?.stage_name}
+        time={selectedArtist?.datetime}
+        image={selectedArtist?.image}
+        artist={selectedArtist?.title}
+        description={selectedArtist?.description}
+      />
       <Hero imageSource={HeroImg} altText="Hero Image" />
       <SectionContainer>
         <h2>LINE UP</h2>
@@ -48,7 +71,8 @@ export const Lineup = () => {
                   key={item.id}
                   image={item.image}
                   name={item.title}
-                  date={item.datetime}
+                  date={formatDateTime(item.datetime)}
+                  onClick={() => openModal(item)}
                 />
               );
             }

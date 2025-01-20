@@ -1,0 +1,47 @@
+@use "../../style/variables" as *;
+@use "../../style/placeholders";
+
+.ArtistModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1200px;
+  max-height: 600px;
+  padding: 1rem 2rem;
+  border: 5px solid #000;
+  background: $White;
+  z-index: 1000;
+
+  .Header {
+    background: $Black;
+    color: $White;
+    padding: 2rem;
+    font-weight: bold;
+    font-size: 28px;
+    text-transform: uppercase;
+  }
+
+  .Container {
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    gap: 2rem;
+
+    img {
+      //   width: 400px;
+      height: 400px;
+    }
+  }
+
+  .SocialIcons {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    gap: 0.5rem;
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

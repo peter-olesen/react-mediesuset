@@ -5,5 +5,27 @@
   background: $DarkGray;
   color: $White;
   width: 1200px;
-  padding: 0.5rem 2rem;
+  font-size: 24px;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      font-weight: bold;
+      height: 75px;
+      cursor: pointer;
+
+      &:hover {
+        background: $Yellow;
+        border: 1px solid #000;
+      }
+    }
+  }
 }
